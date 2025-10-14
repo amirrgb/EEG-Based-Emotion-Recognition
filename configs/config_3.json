@@ -1,0 +1,30 @@
+{
+    "load_method": "pre",
+    "window_size": 250,
+    "stride": 250,
+    "use_pca": false,
+    "use_psd": true,
+    "psd_bands": [
+        2,
+        3
+    ],
+    "use_psd_pca": true,
+    "use_de": false,
+    "de_bands": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "use_de_pca": true,
+    "apply_filter": true,
+    "lowcut": 1.0,
+    "highcut": 50.0,
+    "fs_value": 250,
+    "filter_order": 4,
+    "apply_baseline": true,
+    "baseline_window": 20,
+    "normalize": true,
+    "normalization_method": "zscore"
+}
