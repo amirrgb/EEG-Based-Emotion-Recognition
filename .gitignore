@@ -1,0 +1,53 @@
+# Local experiment results.
+/results/models/
+/results/plots/
+/results/video_profiles/
+cache/
+runs/
+artifacts/
+*.log
+
+# Python environments and caches.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Model weights and serialized data.
+*.pt
+*.pth
+*.ckpt
+*.joblib
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# Local EEG datasets and archives.
+/Data/
+/Processed_data/
+/Preprocessed_data/
+/EEG_Features/
+/Clisa_data/
+/FACED dataset/
+*.bdf
+*.edf
+*.fif
+*.mat
+*.zip
+*.rar
+*.7z
+
+# Local credentials and temporary files.
+.env
+.env.*
+!.env.example
+*.tmp
+~$*
