@@ -116,6 +116,7 @@ Pretrained encoders were kept **frozen**, and linear classifiers were trained fo
 | --- | ---: |
 | [CBraMod](https://arxiv.org/abs/2412.07236) | 54.57% |
 | [LaBraM](https://arxiv.org/abs/2405.18765) | 54.56% |
+| [BIOT](https://papers.neurips.cc/paper_files/paper/2023/hash/f6b30f3e2dd9cb53bbf2024402d02295-Abstract-Conference.html) | 54.55% |
 
 Channels, sampling rates, and window lengths were adapted to each encoder.
 
