@@ -51,3 +51,6 @@ __pycache__/
 !.env.example
 *.tmp
 ~$*
+
+# Local experiment plan.
+/Experiment Plan.txt
