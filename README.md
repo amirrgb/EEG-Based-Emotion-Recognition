@@ -110,7 +110,7 @@ A **327-configuration screening** used one subject-disjoint split, seed 42, and 
 **Folder:** `Graph`.
 ## Pretrained EEG Models
 
-Pretrained encoders were kept **frozen**, and linear classifiers were trained for 10 epochs. The initial screen used **89 training and 22 validation participants**; checkpoints were selected on validation. Values below are **window-level validation balanced accuracy**; model-specific window lengths and input adaptations differ.
+Seven pretrained encoders were kept **frozen**, and linear classifiers were trained for 10 epochs. The initial screen used **89 training and 22 validation participants**; checkpoints were selected on validation. Values below are **window-level validation balanced accuracy**; model-specific window lengths and input adaptations differ.
 
 | Encoder | Balanced accuracy |
 | --- | ---: |
@@ -120,6 +120,7 @@ Pretrained encoders were kept **frozen**, and linear classifiers were trained fo
 | [EEGPT](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4540d267eeec4e5dbd9dae9448f0b739-Abstract-Conference.html) | 57.12% |
 | [LUNA](https://arxiv.org/abs/2510.22257) | 56.50% |
 | [REVE](https://arxiv.org/abs/2510.21585) | 57.89% |
+| [BENDR](https://arxiv.org/abs/2101.12037) | 51.00% |
 
 Channels, sampling rates, and window lengths were adapted to each encoder. The LUNA pretrained weights carry a CC BY-ND license.
 
