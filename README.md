@@ -53,6 +53,8 @@ The initial experiments were conducted as part of the undergraduate thesis.
 
 ### Feature Comparison
 
-Early nine-class GAT-LSTM experiments also compared mean-based and learned channel representations.
+DE, PSD, and their combination were compared with SVM and GAT-LSTM using **one-second, subject-disjoint out-of-fold test predictions across 123 participants and 10 folds**. Early nine-class GAT-LSTM experiments also compared mean-based and learned channel representations.
 
-**Folder:** `New models`.
+![Feature comparison](assets/readme/feature_comparison_bar.png)
+
+**Folders:** `Feature Ablation`, `New models`.
