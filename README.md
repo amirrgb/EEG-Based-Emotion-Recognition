@@ -58,3 +58,13 @@ DE, PSD, and their combination were compared with SVM and GAT-LSTM using **one-s
 ![Feature comparison](assets/readme/feature_comparison_bar.png)
 
 **Folders:** `Feature Ablation`, `New models`.
+
+### DE Baselines
+
+Additional models were evaluated with DE features using **10-fold subject-disjoint evaluation at the one-second level**, with separate training, validation, and test participants within each fold.
+
+| Model | Balanced accuracy | Macro F1 |
+| --- | ---: | ---: |
+| MLP | 54.60% | 0.5460 |
+
+**Folder:** `Simple Models`.
