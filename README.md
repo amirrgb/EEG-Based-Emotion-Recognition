@@ -118,8 +118,9 @@ Pretrained encoders were kept **frozen**, and linear classifiers were trained fo
 | [LaBraM](https://arxiv.org/abs/2405.18765) | 54.56% |
 | [BIOT](https://papers.neurips.cc/paper_files/paper/2023/hash/f6b30f3e2dd9cb53bbf2024402d02295-Abstract-Conference.html) | 54.55% |
 | [EEGPT](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4540d267eeec4e5dbd9dae9448f0b739-Abstract-Conference.html) | 57.12% |
+| [LUNA](https://arxiv.org/abs/2510.22257) | 56.50% |
 
-Channels, sampling rates, and window lengths were adapted to each encoder.
+Channels, sampling rates, and window lengths were adapted to each encoder. The LUNA pretrained weights carry a CC BY-ND license.
 
 **Folder:** `Pretrained`.
 
