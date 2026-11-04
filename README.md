@@ -115,6 +115,7 @@ Pretrained encoders were kept **frozen**, and linear classifiers were trained fo
 | Encoder | Balanced accuracy |
 | --- | ---: |
 | [CBraMod](https://arxiv.org/abs/2412.07236) | 54.57% |
+| [LaBraM](https://arxiv.org/abs/2405.18765) | 54.56% |
 
 Channels, sampling rates, and window lengths were adapted to each encoder.
 
