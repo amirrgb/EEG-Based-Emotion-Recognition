@@ -150,3 +150,9 @@ The extended-training comparison used the original subject split: MSGM for **20 
 
 **PLV-weighted GAT-LSTM** (experiment A00113): 30 electrode nodes, DE + PSD features, spatial connections weighted by phase-locking value (PLV), two GAT layers, mean node pooling, and an LSTM.
 
+### Five-fold stability
+
+Five promising models were trained on the same **five subject-disjoint folds**, each with seeds **42 and 43**: **50 runs** in total. Each run used at most **25 epochs**, with early stopping after **five epochs without improvement**. Evaluation covered the 111 participants from the previous training/validation pool; the 12 previous test participants were excluded.
+![Five-model stability](assets/readme/model_stability_named.png)
+**Folder:** `Robustness`.
+
