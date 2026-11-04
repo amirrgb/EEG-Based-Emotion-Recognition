@@ -57,7 +57,7 @@ DE, PSD, and their combination were compared with SVM and GAT-LSTM using **one-s
 
 ![Feature comparison](assets/readme/feature_comparison_bar.png)
 
-The aggregation analysis also compared mean, max, attention, and hierarchical graph readouts.
+For SVM with DE + PSD, averaging decision scores over each video produced **57.01%** balanced accuracy, compared with **54.95%** at the one-second level. The aggregation analysis also compared mean, max, attention, and hierarchical graph readouts.
 
 **Folders:** `Feature Ablation`, `New models`, `Signal Analysis`.
 
