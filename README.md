@@ -109,6 +109,8 @@ A **327-configuration screening** used one subject-disjoint split, seed 42, and 
 
 The authors' [EmT](https://doi.org/10.1109/TNNLS.2025.3552603) pipeline was also run: it reported **59.66% test accuracy**, but its individual-rating label selection differs from the fixed stimulus labels used in the other binary experiments. That result is therefore kept outside the shared ranking.
 
+**PLV-weighted GAT-LSTM** (experiment A00113): 30 electrode nodes, DE + PSD features, spatial connections weighted by phase-locking value (PLV), two GAT layers, mean node pooling, and an LSTM.
+
 **Folder:** `Graph`.
 ## Pretrained EEG Models
 
