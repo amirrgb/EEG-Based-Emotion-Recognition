@@ -75,6 +75,12 @@ Five additional models were evaluated with DE features using **10-fold subject-d
 
 ## FACED Reproduction Study
 
-The released DE features were verified against the provided preprocessed EEG.
+The released DE features were verified against the provided preprocessed EEG. Binary SVM experiments then examined five-band features, the released final-fold normalization behavior, and a corrected alternative. A separate check used the released Windows package versions.
+
+| Feature setting | Mean classification accuracy (%) — original fold handling | Mean classification accuracy (%) — corrected final fold |
+| --- | ---: | ---: |
+| All five bands | 71.69% | 71.71% |
+
+Following the released code selects SVM C on the evaluated fold, so these reproduction numbers are optimistic and are not evidence of an improvement over the paper. Raw BDF preprocessing was not repeated.
 
 **Folder:** `Reproduction`.
