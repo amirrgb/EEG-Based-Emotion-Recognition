@@ -57,7 +57,9 @@ DE, PSD, and their combination were compared with SVM and GAT-LSTM using **one-s
 
 ![Feature comparison](assets/readme/feature_comparison_bar.png)
 
-**Folders:** `Feature Ablation`, `New models`.
+The aggregation analysis also compared mean, max, attention, and hierarchical graph readouts.
+
+**Folders:** `Feature Ablation`, `New models`, `Signal Analysis`.
 
 ### DE Baselines
 
