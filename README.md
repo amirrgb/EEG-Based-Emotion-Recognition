@@ -32,24 +32,19 @@ The initial experiments were conducted as part of the undergraduate thesis.
 - **Refinement:** the residual 1D CNN, DeepConvNet, and Simple EEGNet were shortlisted. Changes included dropout, SiLU activations, filter sizes, and classifier regularization. **Six training configurations** varied learning rate, weight decay, batch size, and the binary decision threshold.
 - **Error analysis:** precision, recall, confusion matrices, ROC/PR curves, and relationships with arousal, valence, familiarity, and liking were examined. The initial analysis reported greater difficulty for low-arousal/low-liking samples.
 
-## Key Results
+### Selected residual CNN
 
-| Metric               | Value        |
-| -------------------- | ------------ |
-| Final Test Accuracy  | **72.14%**   |
-| Final Train Accuracy | 89.15%       |
-| Final Test Loss      | 0.6482       |
-| Final Train Loss     | 0.3933       |
-| Epochs (Early Stop)  | 28           |
-| Avg Epoch Time       | \~43 seconds |
+**1D CNN with four residual blocks**, adaptive pooling, and an MLP classifier; loading configuration **#8**, training configuration **#3**. Early stopping ended at epoch **28**, with approximately **43 seconds per epoch**.
 
-## Final Model
+| Setting | Value |
+| --- | --- |
+| Optimizer | Adam |
+| Learning rate / weight decay | 0.001 / 0.0001 |
+| Batch size / decision threshold | 64 / 0.5 |
 
-* **Architecture**: 1D CNN with 4 residual blocks, adaptive pooling, MLP classifier.
-* **Training Setup**:
+| Reported metric | Training | Test |
+| --- | ---: | ---: |
+| Accuracy | 89.15% | **72.14%** |
+| Loss | 0.3933 | 0.6482 |
 
-  * Optimizer: Adam
-  * Learning Rate: 0.001
-  * Weight Decay: 0.0001
-  * Batch Size: 64
-  * Sigmoid Threshold: 0.5
+**Folders:** `models`, `configs`, `Analyze`, `results`, `utils`.
