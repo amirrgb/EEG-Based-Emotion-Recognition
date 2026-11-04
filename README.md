@@ -156,3 +156,20 @@ Five promising models were trained on the same **five subject-disjoint folds**, 
 ![Five-model stability](assets/readme/model_stability_named.png)
 **Folder:** `Robustness`.
 
+## Error Analysis and Computational Cost
+
+Class-wise errors were analyzed from the saved predictions. LUNA's mean recall was similar for both classes, while the other models generally recalled positive trials more often. Matching predictions across four models identified **774 shared errors among 5,328 seed-specific trial predictions**; MSGM was excluded from this sample-level matching because its prediction file did not store video IDs.
+
+![Class-wise recall](assets/readme/class_recall_bar.png)
+
+| Model | Trainable parameters | Mean recorded seconds per run | Timing scope |
+| --- | ---: | ---: | --- |
+| [MSGM](https://doi.org/10.3389/fnins.2026.1665145) | 154,362 | 292.04 | Model training + validation |
+| [REVE](https://arxiv.org/abs/2510.21585) | 1,026 | 0.27 | Linear classifier with cached embeddings |
+| [EEGPT](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4540d267eeec4e5dbd9dae9448f0b739-Abstract-Conference.html) | 1,026 | 0.73 | Linear classifier with cached embeddings |
+| [LUNA](https://arxiv.org/abs/2510.22257) | 514 | 0.46 | Linear classifier with cached embeddings |
+| PLV-weighted GAT-LSTM | 24,850 | 32.18 | Model training + validation |
+
+Recorded run time sums the training/validation epochs. For frozen encoders, parameter counts cover only the linear head, and timing excludes encoder inference and feature extraction; these are not end-to-end cost comparisons. The graph model is smaller and faster than MSGM in the recorded runs, with lower validation accuracy.
+
+**Folder:** `Evaluation`.
