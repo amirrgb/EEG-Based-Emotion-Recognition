@@ -72,3 +72,9 @@ Five additional models were evaluated with DE features using **10-fold subject-d
 | HistGradientBoosting | 53.50% | 0.5350 |
 
 **Folder:** `Simple Models`.
+
+## FACED Reproduction Study
+
+The released DE features were verified against the provided preprocessed EEG.
+
+**Folder:** `Reproduction`.
