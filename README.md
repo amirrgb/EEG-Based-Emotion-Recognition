@@ -67,5 +67,6 @@ Additional models were evaluated with DE features using **10-fold subject-disjoi
 | --- | ---: | ---: |
 | MLP | 54.60% | 0.5460 |
 | Shrinkage LDA | 54.08% | 0.5407 |
+| Logistic Regression | 54.45% | 0.5445 |
 
 **Folder:** `Simple Models`.
