@@ -108,3 +108,15 @@ A **327-configuration screening** used one subject-disjoint split, seed 42, and 
 **Interaction experiments:** Graph Node Interactions · Spectral Feature Interactions · Embedding Interactions · Spatial Graph Interactions · Functional Graph Interactions · Edge Weight Interactions · Model and Readout Interactions.
 
 **Folder:** `Graph`.
+## Pretrained EEG Models
+
+Pretrained encoders were kept **frozen**, and linear classifiers were trained for 10 epochs. The initial screen used **89 training and 22 validation participants**; checkpoints were selected on validation. Values below are **window-level validation balanced accuracy**; model-specific window lengths and input adaptations differ.
+
+| Encoder | Balanced accuracy |
+| --- | ---: |
+| [CBraMod](https://arxiv.org/abs/2412.07236) | 54.57% |
+
+Channels, sampling rates, and window lengths were adapted to each encoder.
+
+**Folder:** `Pretrained`.
+
