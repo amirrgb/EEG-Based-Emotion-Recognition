@@ -61,7 +61,7 @@ DE, PSD, and their combination were compared with SVM and GAT-LSTM using **one-s
 
 ### DE Baselines
 
-Additional models were evaluated with DE features using **10-fold subject-disjoint evaluation at the one-second level**, with separate training, validation, and test participants within each fold.
+Five additional models were evaluated with DE features using **10-fold subject-disjoint evaluation at the one-second level**, with separate training, validation, and test participants within each fold.
 
 | Model | Balanced accuracy | Macro F1 |
 | --- | ---: | ---: |
@@ -69,5 +69,6 @@ Additional models were evaluated with DE features using **10-fold subject-disjoi
 | Shrinkage LDA | 54.08% | 0.5407 |
 | Logistic Regression | 54.45% | 0.5445 |
 | Extra Trees | 54.15% | 0.5415 |
+| HistGradientBoosting | 53.50% | 0.5350 |
 
 **Folder:** `Simple Models`.
