@@ -89,3 +89,20 @@ The released DE features were verified against the provided preprocessed EEG. Bi
 The closest mean to the authors' **69.2988%** was **69.3767%**, without delta; individual accuracies matched for only **3 of 123 participants**. Following the released code selects SVM C on the evaluated fold, so these reproduction numbers are optimistic and are not evidence of an improvement over the paper. Raw BDF preprocessing was not repeated.
 
 **Folder:** `Reproduction`.
+
+## Graph-Based Experiments
+
+A **327-configuration screening** used one subject-disjoint split, seed 42, and 10 training epochs. The search covered:
+
+| Component | Variants examined |
+| --- | --- |
+| Nodes | Electrodes, brain regions, electrodes + regions |
+| Node features | DE, PSD, combined features, learned feature embeddings, signal embeddings |
+| Connectivity | Self-loops, complete, spatial, kNN, random, feature similarity, functional, learned |
+| Edge weights | Binary, distance-based, similarity-based, signal-based, learned |
+| Operators | [GCN](https://arxiv.org/abs/1609.02907), [ChebNet](https://arxiv.org/abs/1606.09375), [GraphSAGE](https://arxiv.org/abs/1706.02216), [GAT](https://arxiv.org/abs/1710.10903), [GATv2](https://arxiv.org/abs/2105.14491), [GINE](https://arxiv.org/abs/1905.12265) |
+| Temporal processing and readout | Independent seconds, LSTM, temporal connections; mean, max, attention, hierarchical readout |
+
+**Interaction experiments:** Graph Node Interactions · Spectral Feature Interactions · Embedding Interactions · Spatial Graph Interactions · Functional Graph Interactions · Edge Weight Interactions · Model and Readout Interactions.
+
+**Folder:** `Graph`.
