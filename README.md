@@ -128,3 +128,15 @@ Channels, sampling rates, and window lengths were adapted to each encoder. The L
 
 **Folder:** `Pretrained`.
 
+## Mamba-Based Experiments
+
+- **[MSGM](https://doi.org/10.3389/fnins.2026.1665145):** a single-scale adaptation using the released FACED log-PSD features, 30 channels, and subject-specific batches. This differs from the paper's multi-scale rPSD configuration.
+
+The completed single-split run used **89 training, 22 validation, and 12 test participants**:
+
+| Model | Epochs | Best validation balanced accuracy | Reported test balanced accuracy | Prediction level |
+| --- | ---: | ---: | ---: | --- |
+| MSGM | 10 | 60.42% | 56.60% | Video |
+
+**Folder:** `Mamba`.
+
