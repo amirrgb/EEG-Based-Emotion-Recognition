@@ -48,3 +48,11 @@ The initial experiments were conducted as part of the undergraduate thesis.
 | Loss | 0.3933 | 0.6482 |
 
 **Folders:** `models`, `configs`, `Analyze`, `results`, `utils`.
+
+## Feature Ablation and Baselines
+
+### Feature Comparison
+
+Early nine-class GAT-LSTM experiments also compared mean-based and learned channel representations.
+
+**Folder:** `New models`.
