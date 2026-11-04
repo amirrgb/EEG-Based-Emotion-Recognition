@@ -66,5 +66,6 @@ Additional models were evaluated with DE features using **10-fold subject-disjoi
 | Model | Balanced accuracy | Macro F1 |
 | --- | ---: | ---: |
 | MLP | 54.60% | 0.5460 |
+| Shrinkage LDA | 54.08% | 0.5407 |
 
 **Folder:** `Simple Models`.
