@@ -75,12 +75,17 @@ Five additional models were evaluated with DE features using **10-fold subject-d
 
 ## FACED Reproduction Study
 
-The released DE features were verified against the provided preprocessed EEG. Binary SVM experiments then examined five-band features, the released final-fold normalization behavior, and a corrected alternative. A separate check used the released Windows package versions.
+The released DE features were verified against the provided preprocessed EEG. Binary SVM experiments then examined five-band features, removal of each frequency band, the released final-fold normalization behavior, and a corrected alternative. A separate check used the released Windows package versions.
 
 | Feature setting | Mean classification accuracy (%) — original fold handling | Mean classification accuracy (%) — corrected final fold |
 | --- | ---: | ---: |
 | All five bands | 71.69% | 71.71% |
+| Without delta | 69.38% | 69.39% |
+| Without theta | 67.11% | 67.11% |
+| Without alpha | 71.85% | 71.86% |
+| Without beta | 71.74% | 71.58% |
+| Without gamma | 71.61% | 71.62% |
 
-Following the released code selects SVM C on the evaluated fold, so these reproduction numbers are optimistic and are not evidence of an improvement over the paper. Raw BDF preprocessing was not repeated.
+The closest mean to the authors' **69.2988%** was **69.3767%**, without delta; individual accuracies matched for only **3 of 123 participants**. Following the released code selects SVM C on the evaluated fold, so these reproduction numbers are optimistic and are not evidence of an improvement over the paper. Raw BDF preprocessing was not repeated.
 
 **Folder:** `Reproduction`.
