@@ -110,6 +110,7 @@ A **327-configuration screening** used one subject-disjoint split, seed 42, and 
 The authors' [EmT](https://doi.org/10.1109/TNNLS.2025.3552603) pipeline was also run: it reported **59.66% test accuracy**, but its individual-rating label selection differs from the fixed stimulus labels used in the other binary experiments. That result is therefore kept outside the shared ranking.
 
 **Folder:** `Graph`.
+
 ## Pretrained EEG Models
 
 Seven pretrained encoders were kept **frozen**, and linear classifiers were trained for 10 epochs. The initial screen used **89 training and 22 validation participants**; checkpoints were selected on validation. Values below are **window-level validation balanced accuracy**; model-specific window lengths and input adaptations differ.
@@ -131,12 +132,14 @@ Channels, sampling rates, and window lengths were adapted to each encoder. The L
 ## Mamba-Based Experiments
 
 - **[MSGM](https://doi.org/10.3389/fnins.2026.1665145):** a single-scale adaptation using the released FACED log-PSD features, 30 channels, and subject-specific batches. This differs from the paper's multi-scale rPSD configuration.
+- **[EEGMamba](https://doi.org/10.1016/j.neunet.2025.107816):** frozen-feature screening and fine-tuning were explored. The completed 10-epoch fine-tuning run used three ten-second windows per trial and a Transformers/PyTorch Mamba2 fallback; native CUDA equivalence has not been established.
 
-The completed single-split run used **89 training, 22 validation, and 12 test participants**:
+Both completed single-split runs used **89 training, 22 validation, and 12 test participants**:
 
 | Model | Epochs | Best validation balanced accuracy | Reported test balanced accuracy | Prediction level |
 | --- | ---: | ---: | ---: | --- |
 | MSGM | 10 | 60.42% | 56.60% | Video |
+| EEGMamba | 10 | 57.39% | 56.48% | Ten-second window |
 
 **Folder:** `Mamba`.
 
@@ -144,7 +147,7 @@ The completed single-split run used **89 training, 22 validation, and 12 test pa
 
 ### Extended training
 
-The extended-training comparison used the original subject split: MSGM for **20 epochs** and 18 lighter models for **50 epochs**.
+Twenty candidates were examined on the original subject split: MSGM for **20 epochs**, 18 lighter models for **50 epochs**, and EEGMamba using its completed **10-epoch** run.
 
 ![Extended training results for five top-performing models](assets/readme/extended_training_top5.png)
 
